@@ -7,6 +7,21 @@ public protocol Adapter: class {
 }
 
 public extension Adapter {
+    
+    /// Returns a Boolean value indicating whether the adapter contains a node in the given index path.
+    ///
+    /// - Parameter:
+    ///   - indexPath: The index path to check for containment
+    ///
+    /// - Returns: A Boolean value indicating whether the adapter contains a node in the given index path.
+    func contains(nodeAt indexPath: IndexPath) -> Bool {
+        let section: Int = indexPath.section
+        let row: Int = indexPath.row
+        guard data.indices.contains(section) else { return false }
+        guard data[section].cells.indices.contains(row) else { return false }
+        return true
+    }
+    
     /// Returns a collection of cell nodes in the specified section.
     ///
     /// - Parameter:
