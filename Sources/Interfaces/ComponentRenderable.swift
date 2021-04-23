@@ -23,7 +23,7 @@ public extension ComponentRenderable {
     }
 }
 
-internal extension ComponentRenderable {
+public extension ComponentRenderable {
     /// Invoked every time of before a component got into visible area.
     func contentWillDisplay() {
         guard let content = renderedContent else { return }

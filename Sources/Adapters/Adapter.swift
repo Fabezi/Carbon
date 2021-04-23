@@ -7,7 +7,7 @@ public protocol Adapter: class {
 }
 
 public extension Adapter {
-    
+
     /// Returns a Boolean value indicating whether the adapter contains a node in the given index path.
     ///
     /// - Parameter:
@@ -21,7 +21,7 @@ public extension Adapter {
         guard data[section].cells.indices.contains(row) else { return false }
         return true
     }
-    
+
     /// Returns a collection of cell nodes in the specified section.
     ///
     /// - Parameter:
