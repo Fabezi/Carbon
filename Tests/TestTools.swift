@@ -489,7 +489,7 @@ struct Pair<T, U> {
 extension Pair: Equatable where T: Equatable, U: Equatable {}
 
 /// Protocol for `UIView` utility.
-protocol UIViewConvertible: class {
+protocol UIViewConvertible: AnyObject {
     var uiView: UIView { get }
 }
 
